@@ -1,0 +1,30 @@
+footer {
+  background-color: $secondary-color;
+  color: white;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0.5rem;
+  .footer__text--p {
+    margin: 5px;
+    @media (max-width: 991px) {
+      font-size: 10px;
+    }
+  }
+  .footer__icons--i {
+    font-size: 25px;
+    padding: 1rem;
+    @media (max-width: 991px) {
+      font-size: 16px;
+      padding: 0.5rem;
+    }
+  }
+  .footer__logo {
+    font-family: $logo-font;
+    font-size: 30px;
+    @media (max-width: 991px) {
+      font-size: 20px;
+    }
+  }
+}
