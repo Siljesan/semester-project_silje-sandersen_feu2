@@ -10,13 +10,20 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    margin: 0rem 1rem 0rem 1rem;
   }
   .herobanner__text--heading {
     font-size: 4rem;
     font-weight: lighter;
+    @media (max-width: 991px) {
+      font-size: 3rem;
+    }
   }
   .herobanner__text--p {
     font-size: 2rem;
+    @media (max-width: 991px) {
+      font-size: 1.5rem;
+    }
   }
   .herobanner__text--btn {
     width: 100%;
@@ -27,6 +34,12 @@
     color: white;
     font-family: $main-font;
     font-size: 1.3rem;
+    @media (max-width: 991px) {
+      font-size: 1rem;
+    }
+    a {
+      color: white;
+    }
   }
   .herobanner__icons {
     position: absolute;
@@ -34,6 +47,9 @@
     bottom: 15rem;
     display: flex;
     flex-direction: column;
+    @media (max-width: 991px) {
+      display: none;
+    }
   }
   .herobanner__icons--i {
     font-size: 1.5rem;

@@ -30,6 +30,13 @@ header {
   width: 85%;
 }
 
+@media (max-width: 991px) {
+  header {
+    width: auto;
+    padding: 1rem;
+  }
+}
+
 header .logo {
   font-family: "Bebas Neue", cursive;
   font-size: 60px;
@@ -45,6 +52,7 @@ header .nav__hamburgerLabel {
     display: -ms-flexbox;
     display: flex;
     font-size: 1.5rem;
+    margin-left: 2rem;
   }
 }
 
@@ -164,6 +172,7 @@ footer .footer__logo {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: 0rem 1rem 0rem 1rem;
 }
 
 .herobanner .herobanner__text--heading {
@@ -171,8 +180,20 @@ footer .footer__logo {
   font-weight: lighter;
 }
 
+@media (max-width: 991px) {
+  .herobanner .herobanner__text--heading {
+    font-size: 3rem;
+  }
+}
+
 .herobanner .herobanner__text--p {
   font-size: 2rem;
+}
+
+@media (max-width: 991px) {
+  .herobanner .herobanner__text--p {
+    font-size: 1.5rem;
+  }
 }
 
 .herobanner .herobanner__text--btn {
@@ -186,6 +207,16 @@ footer .footer__logo {
   font-size: 1.3rem;
 }
 
+@media (max-width: 991px) {
+  .herobanner .herobanner__text--btn {
+    font-size: 1rem;
+  }
+}
+
+.herobanner .herobanner__text--btn a {
+  color: white;
+}
+
 .herobanner .herobanner__icons {
   position: absolute;
   right: 5rem;
@@ -197,6 +228,12 @@ footer .footer__logo {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+@media (max-width: 991px) {
+  .herobanner .herobanner__icons {
+    display: none;
+  }
 }
 
 .herobanner .herobanner__icons--i {
