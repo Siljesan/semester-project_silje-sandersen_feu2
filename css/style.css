@@ -3,11 +3,16 @@ body {
   margin: 0;
   font-family: "Montserrat", sans-serif;
   background-color: #f5f8ff;
+  position: relative;
 }
 
 body a {
   text-decoration: none;
   color: black;
+}
+
+body header {
+  position: absolute;
 }
 
 header {
@@ -17,13 +22,17 @@ header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 1rem 5rem 1rem 5rem;
   background: none;
+  width: 85%;
 }
 
 header .logo {
   font-family: "Bebas Neue", cursive;
-  font-size: 40px;
+  font-size: 60px;
 }
 
 header .nav__hamburgerLabel {
@@ -68,12 +77,20 @@ header .nav__list {
 header .nav__list .nav__list--item {
   padding: 1rem;
   list-style-type: none;
+  font-size: 20px;
+}
+
+.home {
+  color: white;
+}
+
+.home .nav__list--item a {
+  color: white;
 }
 
 footer {
   background-color: #00264b;
   color: white;
-  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -116,5 +133,56 @@ footer .footer__logo {
   footer .footer__logo {
     font-size: 20px;
   }
+}
+
+.herobanner {
+  background-image: url(../../img/ocean.jpg);
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+}
+
+.herobanner .herobanner__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.herobanner .herobanner__text--heading {
+  font-size: 4rem;
+  font-weight: lighter;
+}
+
+.herobanner .herobanner__text--p {
+  font-size: 2rem;
+}
+
+.herobanner .herobanner__text--btn {
+  width: 100%;
+  padding: 0.5rem;
+  border: solid 2px white;
+  border-radius: 5px;
+  background: none;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.3rem;
 }
 /*# sourceMappingURL=style.css.map */

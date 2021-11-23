@@ -1,11 +1,13 @@
 header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 1rem 5rem 1rem 5rem;
   background: none;
+  width: 85%;
   .logo {
     font-family: $logo-font;
-    font-size: 40px;
+    font-size: 60px;
   }
   .nav__hamburgerLabel {
     display: none;
@@ -31,6 +33,13 @@ header {
     .nav__list--item {
       padding: 1rem;
       list-style-type: none;
+      font-size: 20px;
     }
+  }
+}
+.home {
+  color: white;
+  .nav__list--item a {
+    color: white;
   }
 }

@@ -1,0 +1,31 @@
+.herobanner {
+  background-image: url(../../img/ocean.jpg);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  .herobanner__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .herobanner__text--heading {
+    font-size: 4rem;
+    font-weight: lighter;
+  }
+  .herobanner__text--p {
+    font-size: 2rem;
+  }
+  .herobanner__text--btn {
+    width: 100%;
+    padding: 0.5rem;
+    border: solid 2px white;
+    border-radius: $radius;
+    background: none;
+    color: white;
+    font-family: $main-font;
+    font-size: 1.3rem;
+  }
+}
