@@ -28,4 +28,15 @@
     font-family: $main-font;
     font-size: 1.3rem;
   }
+  .herobanner__icons {
+    position: absolute;
+    right: 5rem;
+    bottom: 15rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .herobanner__icons--i {
+    font-size: 1.5rem;
+    padding: 1rem;
+  }
 }

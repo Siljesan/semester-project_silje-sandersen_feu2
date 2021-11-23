@@ -185,4 +185,22 @@ footer .footer__logo {
   font-family: "Montserrat", sans-serif;
   font-size: 1.3rem;
 }
+
+.herobanner .herobanner__icons {
+  position: absolute;
+  right: 5rem;
+  bottom: 15rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.herobanner .herobanner__icons--i {
+  font-size: 1.5rem;
+  padding: 1rem;
+}
 /*# sourceMappingURL=style.css.map */
