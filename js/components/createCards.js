@@ -1,4 +1,4 @@
-import { featuredProducts, strapiUrl } from "../constants.js";
+import { featuredProducts, productcont, strapiUrl } from "../constants.js";
 
 export const renderFeaturedCard = (arr) => {
   featuredProducts.innerHTML = "";
@@ -6,11 +6,20 @@ export const renderFeaturedCard = (arr) => {
     console.log(element);
     if (element.Featured) {
       featuredProducts.innerHTML += `
-            <div class="featured__card">
-            <img class="featured__card--img" src="${strapiUrl}${element.Productimg.url}" alt="${element.Productimg.alternativeText}">
+            <div class="card">
+            <img class="card__img" src="${strapiUrl}${element.Productimg.url}" alt="${element.Productimg.alternativeText}">
             <h3>${element.Title}</h3>
             <p>${element.Price}</p>
             </div>`;
     }
+  });
+};
+
+export const renderProductCard = (arr) => {
+  productcont.innerHTML = "";
+  arr.forEach((element) => {
+    productcont.innerHTML += `
+      <div class="productCard__card">
+      </div>`;
   });
 };
