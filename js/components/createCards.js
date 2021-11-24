@@ -19,7 +19,13 @@ export const renderProductCard = (arr) => {
   arr.forEach((element) => {
     productcont.innerHTML += `
     <div class="card productCard">
+    <div class="imgCont">
+    <div class="imgCont__overlay"></div>
     <img class="card__img" src="${strapiUrl}${element.Productimg.url}" alt="${element.Productimg.alternativeText}">
+    <div class="imgCont__details fadeIn-top">
+    <h4>Read more</h4>
+    </div>
+    </div>
     <h3>${element.Title}</h3>
     <p>${element.Price}</p>
     </div>`;
