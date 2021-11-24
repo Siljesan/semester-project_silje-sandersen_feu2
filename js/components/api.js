@@ -1,10 +1,9 @@
-import { renderFeaturedCard } from "./createCards.js";
 import { renderHero } from "./hero.js";
 
-export async function getProducts(url) {
+export async function getProducts(url, call) {
   const response = await fetch(url);
   const json = await response.json();
-  renderFeaturedCard(json);
+  call(json);
 }
 
 export async function getHero(url) {
