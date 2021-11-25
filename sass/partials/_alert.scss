@@ -1,0 +1,21 @@
+.alert {
+  width: 100%;
+  text-align: center;
+  .information {
+    border: solid 2px $secondary-color;
+    max-width: 500px;
+    width: 50%;
+    color: $secondary-color;
+    border-radius: $radius;
+  }
+  .danger {
+    @extend .information;
+    border: solid 2px red;
+    color: black;
+  }
+  .success {
+    @extend .information;
+    border: solid 2px green;
+    color: black;
+  }
+}

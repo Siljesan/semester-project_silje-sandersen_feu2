@@ -381,4 +381,12 @@ footer .footer__logo {
   left: 50%;
   opacity: 1;
 }
+
+.hide {
+  display: none;
+}
+
+.loading {
+  text-align: center;
+}
 /*# sourceMappingURL=style.css.map */
