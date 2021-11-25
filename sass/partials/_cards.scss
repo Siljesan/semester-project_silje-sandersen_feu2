@@ -27,17 +27,14 @@
   margin-top: 5rem;
   margin-bottom: 5rem;
 }
+
 .card {
-  max-width: 500px;
+  max-width: 450px;
   width: 30%;
   min-width: 400px;
   @media (max-width: 991px) {
     width: 90%;
     min-width: auto;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-  }
-  .productCard {
     margin-top: 2rem;
     margin-bottom: 2rem;
   }
@@ -48,24 +45,21 @@
   p {
     font-weight: bolder;
   }
-  .card__img {
-    width: 100%;
-    border-radius: $radius;
-  }
 }
+
 .imgCont {
   position: relative;
   width: 100%;
-  /*height: 350px;*/
+  height: 270px;
   border-radius: $radius;
   overflow: hidden;
-  /* @media (max-width: 991px) {
+  @media (max-width: 991px) {
     height: auto;
-  }*/
-  .imgCont .imgCont__overlay {
+  }
+  .imgCont__overlay {
     background: rgba(0, 0, 0, 0.7);
     position: absolute;
-    height: 99%;
+    height: 100%;
     width: 100%;
     left: 0;
     top: 0;
@@ -76,12 +70,13 @@
     -moz-transition: all 0.4s ease-in-out 0s;
     transition: all 0.4s ease-in-out 0s;
   }
-  .imgCont:hover .imgCont__overlay {
-    opacity: 1;
-  }
   .card__img {
     width: 100%;
+    height: 270px;
     border-radius: $radius;
+    @media (max-width: 991px) {
+      height: auto;
+    }
   }
   .imgCont__details {
     position: absolute;
@@ -99,11 +94,6 @@
     -moz-transition: all 0.3s ease-in-out 0s;
     transition: all 0.3s ease-in-out 0s;
   }
-  .imgCont:hover .imgCont__details {
-    top: 50%;
-    left: 50%;
-    opacity: 1;
-  }
   .imgCont__details h4 {
     color: #fff;
     font-weight: 500;
@@ -114,4 +104,12 @@
   .fadeIn-top {
     top: 20%;
   }
+}
+.imgCont:hover .imgCont__overlay {
+  opacity: 1;
+}
+.imgCont:hover .imgCont__details {
+  top: 50%;
+  left: 50%;
+  opacity: 1;
 }
