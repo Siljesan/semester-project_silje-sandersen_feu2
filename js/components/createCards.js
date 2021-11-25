@@ -7,7 +7,7 @@ export const renderFeaturedCard = (arr) => {
       featuredProducts.innerHTML += `
             <div class="card featuredCard">
             <div class="imgCont">
-            <a href="productDetail.html">
+            <a href="productDetail.html?id=${element.id}">
                 <div class="imgCont__overlay"></div>
                 <img class="card__img" src="${strapiUrl}${element.Productimg.url}" alt="${element.Productimg.alternativeText}">
                 <div class="imgCont__details fadeIn-top">
@@ -28,7 +28,7 @@ export const renderProductCard = (arr) => {
     productcont.innerHTML += `
     <div class="card productCard">
         <div class="imgCont">
-            <a href="productDetail.html">
+            <a href="productDetail.html?id=${element.id}">
                 <div class="imgCont__overlay"></div>
                 <img class="card__img" src="${strapiUrl}${element.Productimg.url}" alt="${element.Productimg.alternativeText}">
                 <div class="imgCont__details fadeIn-top">

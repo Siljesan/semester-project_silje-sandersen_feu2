@@ -1,0 +1,20 @@
+.searchfield {
+  display: flex;
+  justify-content: flex-end;
+  @media (max-width: 991px) {
+    justify-content: flex-start;
+  }
+  #productFilter {
+    margin: 0;
+    border-radius: $radius 0 0 $radius;
+    border: solid 2px $secondary-color;
+  }
+  .searchBtn {
+    margin: 0;
+    border-radius: 0 $radius $radius 0;
+    background-color: $secondary-color;
+    color: white;
+    font-family: $main-font;
+    border: none;
+  }
+}
