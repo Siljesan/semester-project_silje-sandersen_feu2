@@ -38,9 +38,10 @@ export async function getDetails(url, itemId) {
         <h1 class="detailtext__heading">${json.Title}</h1>
         <p class="detailtext__paragraph">${json.Description}</p>
         <p class="detailtext__price">${json.Price} NOK</p>
-        <button class="detailtext__btn" id="${id}-add">Add to cart</button>
+        <button class="detailtext__btn" id="${json.id}-add">Add to cart</button>
         </div>
         </div>`;
+    addListener(json);
   } catch (error) {
     document.querySelector(".alert").innerHTML += showAlert(
       "An error occured",
@@ -51,7 +52,6 @@ export async function getDetails(url, itemId) {
       document.querySelector(".alert").innerHTML = "";
     }, 3000);
   }
-  //addListener(json);
 }
 
 export async function getHero(url) {

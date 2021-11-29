@@ -40,9 +40,9 @@ const removeListener = () => {
   });
 };
 
-export const addListener = (arr) => {
-  document.getElementById(`${id}-add`).addEventListener("click", () => {
-    collection.push(arr[findIndex(arr, item)]);
+export const addListener = (item) => {
+  document.getElementById(`${item.id}-add`).addEventListener("click", () => {
+    collection.push(item);
     saveToStorage(cartKey, collection);
   });
 };
@@ -57,14 +57,6 @@ export const renderCart = () => {
     });
     removeListener();
   }
-};
-
-export const renderDetails = (arr) => {
-  details.innerHTML = "";
-  arr.forEach((item) => {
-    details.innerHTML += createDetails(item, "add", "Add to favourites");
-  });
-  addListener(arr);
 };
 
 export const renderFeaturedCard = (arr) => {
