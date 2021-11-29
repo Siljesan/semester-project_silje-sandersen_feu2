@@ -1,6 +1,9 @@
-.cart {
+.cartcont {
   margin: $margin;
   margin-top: 2rem;
+  border-bottom: solid 1px $secondary-color;
+}
+.cart {
   &__item {
     display: flex;
     justify-content: space-between;

@@ -1,7 +1,6 @@
 import {
   cartContainer,
   cartKey,
-  details,
   featuredProducts,
   productcont,
   strapiUrl,
@@ -9,10 +8,10 @@ import {
 import { retrieveFromStorage, saveToStorage } from "../utils/storage.js";
 import { findIndex } from "./findIndex.js";
 
-let collection = [];
+let collection;
 let storageArray = retrieveFromStorage(cartKey);
 
-console.log(collection);
+console.log(storageArray);
 
 const createCart = (item, version) => {
   const { id, Productimg, Title, Price } = item;
@@ -35,12 +34,18 @@ const removeListener = () => {
     document
       .getElementById(`${item.id}-remove`)
       .addEventListener("click", () => {
-        storageArray.splice(findIndex(storageArray, item), 1);
-        saveToStorage(item);
+        storageArray.splice(item.id, 1);
+        saveToStorage(cartKey, item);
         renderCart();
       });
   });
 };
+
+if (localStorage.getItem(cartKey) == null) {
+  collection = [];
+} else {
+  collection = JSON.parse(localStorage.getItem(cartKey));
+}
 
 export const addListener = (item) => {
   document.getElementById(`${item.id}-add`).addEventListener("click", () => {
