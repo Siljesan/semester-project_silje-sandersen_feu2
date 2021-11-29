@@ -1,0 +1,40 @@
+.detailcont {
+  display: flex;
+  justify-content: space-around;
+  margin: $margin;
+  margin-top: 2rem;
+  &__img {
+    width: 45%;
+    border-radius: $radius;
+  }
+  .detailtext {
+    width: 45%;
+    padding: 1rem;
+    border-left: solid 1px $secondary-color;
+    &__heading {
+      font-size: 2.5rem;
+    }
+    &__paragraph {
+      line-height: 1.5rem;
+    }
+    &__price {
+      margin-top: 4rem;
+      font-weight: bold;
+    }
+    &__btn {
+      width: 50%;
+      border: solid 2px $secondary-color;
+      border-radius: $radius;
+      background-color: $primary-color;
+      font-family: $main-font;
+      font-size: 1rem;
+      color: $secondary-color;
+      padding: 0.3rem;
+    }
+    &__btn:hover {
+      color: $primary-color;
+      background-color: $secondary-color;
+      cursor: pointer;
+    }
+  }
+}

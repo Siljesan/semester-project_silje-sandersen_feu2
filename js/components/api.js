@@ -31,11 +31,13 @@ export async function getDetails(url, itemId) {
     document.querySelector(".loading").classList.add("hide");
     document.title = json.Title;
     details.innerHTML += `
-        <div>
-        <h1>${json.Title}</h1>
-        <div class="detailText">
-        <img class="detailText__img" src="${strapiUrl}${json.Productimg.url}" alt="${json.Productimg.alternativeText}">
-        <p>${json.Description}</p>
+        <div class="detailcont">
+        <img class="detailcont__img" src="${strapiUrl}${json.Productimg.url}" alt="${json.Productimg.alternativeText}">
+        <div class="detailtext">
+        <h1 class="detailtext__heading">${json.Title}</h1>
+        <p class="detailtext__paragraph">${json.Description}</p>
+        <p class="detailtext__price">${json.Price} NOK</p>
+        <button class="detailtext__btn">Add to cart</button>
         </div>
         </div>`;
   } catch (error) {
