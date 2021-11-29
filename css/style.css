@@ -499,16 +499,16 @@ footer .footer__logo {
   width: 50%;
   border: solid 2px #00264b;
   border-radius: 5px;
-  background-color: #f5f8ff;
+  background-color: #00264b;
   font-family: "Montserrat", sans-serif;
   font-size: 1rem;
-  color: #00264b;
+  color: #f5f8ff;
   padding: 0.3rem;
 }
 
 .detailcont .detailtext__btn:hover {
-  color: #f5f8ff;
-  background-color: #00264b;
+  color: #00264b;
+  background-color: #f5f8ff;
   cursor: pointer;
 }
 /*# sourceMappingURL=style.css.map */

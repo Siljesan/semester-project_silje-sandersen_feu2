@@ -25,15 +25,15 @@
       width: 50%;
       border: solid 2px $secondary-color;
       border-radius: $radius;
-      background-color: $primary-color;
+      background-color: $secondary-color;
       font-family: $main-font;
       font-size: 1rem;
-      color: $secondary-color;
+      color: $primary-color;
       padding: 0.3rem;
     }
     &__btn:hover {
-      color: $primary-color;
-      background-color: $secondary-color;
+      color: $secondary-color;
+      background-color: $primary-color;
       cursor: pointer;
     }
   }
