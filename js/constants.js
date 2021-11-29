@@ -6,3 +6,5 @@ export const featuredProducts = document.querySelector(".featured__products");
 export const productcont = document.querySelector(".productCards");
 export const inputValue = document.querySelector("#productFilter");
 export const details = document.querySelector(".productDetails");
+export const cartKey = "cart";
+export const cartContainer = document.querySelector(".cartcont");

@@ -8,6 +8,7 @@
     margin: 0;
     border-radius: $radius 0 0 $radius;
     border: solid 2px $secondary-color;
+    padding: 0.3rem;
   }
   .searchBtn {
     margin: 0;
@@ -16,5 +17,6 @@
     color: white;
     font-family: $main-font;
     border: none;
+    padding: 0.3rem;
   }
 }

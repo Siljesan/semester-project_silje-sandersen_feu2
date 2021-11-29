@@ -450,6 +450,7 @@ footer .footer__logo {
   margin: 0;
   border-radius: 5px 0 0 5px;
   border: solid 2px #00264b;
+  padding: 0.3rem;
 }
 
 .searchfield .searchBtn {
@@ -459,6 +460,7 @@ footer .footer__logo {
   color: white;
   font-family: "Montserrat", sans-serif;
   border: none;
+  padding: 0.3rem;
 }
 
 .detailcont {

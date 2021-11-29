@@ -1,5 +1,6 @@
 import { details, strapiUrl } from "../constants.js";
 import { showAlert } from "./alert.js";
+import { addListener } from "./createCards.js";
 import { renderHero } from "./hero.js";
 import { searchItems } from "./searchField.js";
 
@@ -37,7 +38,7 @@ export async function getDetails(url, itemId) {
         <h1 class="detailtext__heading">${json.Title}</h1>
         <p class="detailtext__paragraph">${json.Description}</p>
         <p class="detailtext__price">${json.Price} NOK</p>
-        <button class="detailtext__btn">Add to cart</button>
+        <button class="detailtext__btn" id="${id}-add">Add to cart</button>
         </div>
         </div>`;
   } catch (error) {
@@ -50,6 +51,7 @@ export async function getDetails(url, itemId) {
       document.querySelector(".alert").innerHTML = "";
     }, 3000);
   }
+  //addListener(json);
 }
 
 export async function getHero(url) {

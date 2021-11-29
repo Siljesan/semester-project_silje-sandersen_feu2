@@ -1,4 +1,71 @@
-import { featuredProducts, productcont, strapiUrl } from "../constants.js";
+import {
+  cartContainer,
+  cartKey,
+  details,
+  featuredProducts,
+  productcont,
+  strapiUrl,
+} from "../constants.js";
+import { retrieveFromStorage, saveToStorage } from "../utils/storage.js";
+import { findIndex } from "./findIndex.js";
+
+let collection = [];
+let storageArray = retrieveFromStorage(cartKey);
+
+const createCart = (item, version) => {
+  const { id, Productimg, Title, Price } = item;
+
+  return `
+  <div class="cart">
+  <div class="cart__item">
+  <img class="cart__item--img" src="${strapiUrl}${Productimg.url}" alt="${Productimg.alternativeText}">
+  <div class="cart__itemText">
+  <h3 class="cart__itemText--title">${Title}</h3>
+  <p class="cart__itemText--price">${Price}</p>
+  </div>
+  <button class="cart__item--btn" id="${id}-${version}"><i class="fas fa-trash"></i></button>
+  </div>
+  </div>`;
+};
+
+const removeListener = () => {
+  storageArray.forEach((item) => {
+    document
+      .getElementById(`${item.id}-remove`)
+      .addEventListener("click", () => {
+        storageArray.splice(findIndex(storageArray, item), 1);
+        saveToStorage(item);
+        renderCart();
+      });
+  });
+};
+
+export const addListener = (arr) => {
+  document.getElementById(`${id}-add`).addEventListener("click", () => {
+    collection.push(arr[findIndex(arr, item)]);
+    saveToStorage(cartKey, collection);
+  });
+};
+
+export const renderCart = () => {
+  cartContainer.innerHTML = "";
+  if (!storageArray.length) {
+    cartContainer.innerHTML = "<h2>No items added</h2>";
+  } else {
+    storageArray.forEach((item) => {
+      return (cartContainer.innerHTML += createCart(item, "remove"));
+    });
+    removeListener();
+  }
+};
+
+export const renderDetails = (arr) => {
+  details.innerHTML = "";
+  arr.forEach((item) => {
+    details.innerHTML += createDetails(item, "add", "Add to favourites");
+  });
+  addListener(arr);
+};
 
 export const renderFeaturedCard = (arr) => {
   featuredProducts.innerHTML = "";
