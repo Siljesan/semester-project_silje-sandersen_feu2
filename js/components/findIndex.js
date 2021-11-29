@@ -1,3 +1,7 @@
 export const findIndex = (item) => {
-  return indexOf(item.id);
+  return item.id
+    .map((x) => {
+      return x.id;
+    })
+    .indexOf(item.id);
 };

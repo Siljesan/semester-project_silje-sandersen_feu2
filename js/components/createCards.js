@@ -12,6 +12,8 @@ import { findIndex } from "./findIndex.js";
 let collection = [];
 let storageArray = retrieveFromStorage(cartKey);
 
+console.log(collection);
+
 const createCart = (item, version) => {
   const { id, Productimg, Title, Price } = item;
 
@@ -21,7 +23,7 @@ const createCart = (item, version) => {
   <img class="cart__item--img" src="${strapiUrl}${Productimg.url}" alt="${Productimg.alternativeText}">
   <div class="cart__itemText">
   <h3 class="cart__itemText--title">${Title}</h3>
-  <p class="cart__itemText--price">${Price}</p>
+  <p class="cart__itemText--price">${Price} NOK</p>
   </div>
   <button class="cart__item--btn" id="${id}-${version}"><i class="fas fa-trash"></i></button>
   </div>

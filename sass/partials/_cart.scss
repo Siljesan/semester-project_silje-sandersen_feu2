@@ -1,0 +1,26 @@
+.cart {
+  margin: $margin;
+  margin-top: 2rem;
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: solid 1px $secondary-color;
+    padding: 1rem;
+  }
+  &__item--img {
+    width: 250px;
+    border-radius: $radius;
+  }
+  &__itemText {
+    text-align: center;
+  }
+  &__itemText--price {
+    font-weight: bold;
+  }
+  &__item--btn {
+    border: none;
+    background-color: transparent;
+    font-size: 1.5rem;
+  }
+}

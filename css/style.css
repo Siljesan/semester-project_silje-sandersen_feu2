@@ -467,8 +467,9 @@ footer .footer__logo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin: 10rem;
   margin-top: 2rem;
 }
@@ -512,5 +513,43 @@ footer .footer__logo {
   color: #00264b;
   background-color: #f5f8ff;
   cursor: pointer;
+}
+
+.cart {
+  margin: 10rem;
+  margin-top: 2rem;
+}
+
+.cart__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-top: solid 1px #00264b;
+  padding: 1rem;
+}
+
+.cart__item--img {
+  width: 250px;
+  border-radius: 5px;
+}
+
+.cart__itemText {
+  text-align: center;
+}
+
+.cart__itemText--price {
+  font-weight: bold;
+}
+
+.cart__item--btn {
+  border: none;
+  background-color: transparent;
+  font-size: 1.5rem;
 }
 /*# sourceMappingURL=style.css.map */
