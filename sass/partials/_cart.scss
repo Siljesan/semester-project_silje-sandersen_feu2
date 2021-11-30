@@ -3,6 +3,9 @@
   margin-top: 2rem;
   border-bottom: solid 1px $secondary-color;
 }
+.cartheader {
+  margin-left: $margin;
+}
 .cart {
   &__item {
     display: flex;

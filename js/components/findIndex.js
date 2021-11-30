@@ -1,5 +1,5 @@
-export const findIndex = (item) => {
-  return item.id
+export const findIndex = (arr, item) => {
+  return arr
     .map((x) => {
       return x.id;
     })

@@ -521,6 +521,10 @@ footer .footer__logo {
   border-bottom: solid 1px #00264b;
 }
 
+.cartheader {
+  margin-left: 10rem;
+}
+
 .cart__item {
   display: -webkit-box;
   display: -ms-flexbox;

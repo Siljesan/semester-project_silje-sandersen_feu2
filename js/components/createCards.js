@@ -11,7 +11,7 @@ import { findIndex } from "./findIndex.js";
 let collection;
 let storageArray = retrieveFromStorage(cartKey);
 
-console.log(storageArray);
+console.log(collection);
 
 const createCart = (item, version) => {
   const { id, Productimg, Title, Price } = item;
@@ -34,8 +34,8 @@ const removeListener = () => {
     document
       .getElementById(`${item.id}-remove`)
       .addEventListener("click", () => {
-        storageArray.splice(item.id, 1);
-        saveToStorage(cartKey, item);
+        storageArray.splice(findIndex(storageArray, item), 1);
+        saveToStorage(cartKey, storageArray);
         renderCart();
       });
   });
