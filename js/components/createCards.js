@@ -7,6 +7,7 @@ import {
 } from "../constants.js";
 import { retrieveFromStorage, saveToStorage } from "../utils/storage.js";
 import { findIndex } from "./findIndex.js";
+import { summarizeCart } from "./sum.js";
 
 let collection;
 let storageArray = retrieveFromStorage(cartKey);
@@ -63,6 +64,7 @@ export const renderCart = () => {
       return (cartContainer.innerHTML += createCart(item, "remove"));
     });
     removeListener();
+    summarizeCart(storageArray);
   }
 };
 

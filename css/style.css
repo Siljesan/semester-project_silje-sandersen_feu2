@@ -515,14 +515,13 @@ footer .footer__logo {
   cursor: pointer;
 }
 
-.cartcont {
+.yourcart {
   margin: 10rem;
   margin-top: 2rem;
-  border-bottom: solid 1px #00264b;
 }
 
-.cartheader {
-  margin-left: 10rem;
+.cartcont {
+  border-bottom: solid 1px #00264b;
 }
 
 .cart__item {

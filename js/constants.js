@@ -8,3 +8,4 @@ export const inputValue = document.querySelector("#productFilter");
 export const details = document.querySelector(".productDetails");
 export const cartKey = "cart";
 export const cartContainer = document.querySelector(".cartcont");
+export const cartSum = document.querySelector(".cartsum");
