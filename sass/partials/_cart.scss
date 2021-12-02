@@ -1,6 +1,33 @@
 .yourcart {
   margin: $margin;
   margin-top: 2rem;
+  width: 60%;
+  margin: 0 auto;
+  margin-bottom: $margin;
+  .cartsummary {
+    width: 100%;
+    text-align: end;
+    margin-top: 2rem;
+    font-weight: bolder;
+  }
+  button {
+    border: solid 2px $secondary-color;
+    border-radius: $radius;
+    background-color: $secondary-color;
+    font-family: $main-font;
+    font-size: 1rem;
+    color: $primary-color;
+    padding: 0.3rem;
+  }
+  button:hover {
+    color: $secondary-color;
+    background-color: $primary-color;
+    cursor: pointer;
+  }
+  .cartbtn {
+    width: 250px;
+    margin-top: 1rem;
+  }
 }
 .cartcont {
   border-bottom: solid 1px $secondary-color;
@@ -18,7 +45,7 @@
     border-radius: $radius;
   }
   &__itemText {
-    text-align: center;
+    text-align: end;
   }
   &__itemText--price {
     font-weight: bold;

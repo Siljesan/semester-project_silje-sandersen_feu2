@@ -24,8 +24,8 @@ const createCart = (item, version) => {
   <div class="cart__itemText">
   <h3 class="cart__itemText--title">${Title}</h3>
   <p class="cart__itemText--price">${Price} NOK</p>
-  </div>
   <button class="cart__item--btn" id="${id}-${version}"><i class="fas fa-trash"></i></button>
+  </div>
   </div>
   </div>`;
 };
