@@ -643,6 +643,10 @@ footer .footer__logo {
           justify-content: center;
 }
 
+.loginmain .loginform .danger {
+  color: red;
+}
+
 .loginmain .loginform label {
   margin-top: 1rem;
 }

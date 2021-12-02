@@ -10,3 +10,7 @@ export const retrieveFromStorage = (key) => {
   }
   return JSON.parse(value);
 };
+
+export const saveToken = (tokenKey, token) => {
+  saveToStorage(tokenKey, token);
+};
