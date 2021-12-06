@@ -1,0 +1,24 @@
+.admin {
+  margin: 2rem $margin;
+}
+.adminProducts {
+  border-bottom: solid 1px $secondary-color;
+  &__headings {
+    display: flex;
+    justify-content: space-around;
+  }
+  &__items {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top: solid 1px $secondary-color;
+    padding: 1rem;
+    &--element {
+      max-width: 150px;
+    }
+  }
+  &__img {
+    width: 150px;
+    border-radius: $radius;
+  }
+}

@@ -16,6 +16,12 @@ body .home {
   top: 0;
 }
 
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -667,5 +673,43 @@ footer .footer__logo {
   background-color: #f5f8ff;
   color: #00264b;
   cursor: pointer;
+}
+
+.admin {
+  margin: 2rem 10rem;
+}
+
+.adminProducts {
+  border-bottom: solid 1px #00264b;
+}
+
+.adminProducts__headings {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.adminProducts__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-top: solid 1px #00264b;
+  padding: 1rem;
+}
+
+.adminProducts__items--element {
+  max-width: 150px;
+}
+
+.adminProducts__img {
+  width: 150px;
+  border-radius: 5px;
 }
 /*# sourceMappingURL=style.css.map */
