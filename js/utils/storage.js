@@ -14,3 +14,7 @@ export const retrieveFromStorage = (key) => {
 export const saveToken = (tokenKey, token) => {
   saveToStorage(tokenKey, token);
 };
+
+export const getToken = (tokenKey) => {
+  return retrieveFromStorage(tokenKey);
+};

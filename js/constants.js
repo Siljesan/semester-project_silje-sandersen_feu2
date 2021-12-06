@@ -15,3 +15,9 @@ export const loginForm = document.querySelector(".loginform");
 export const formEmail = document.querySelector("#email");
 export const formPassword = document.querySelector("#password");
 export const productList = document.querySelector(".productlist");
+
+export const editForm = document.querySelector(".edit-product");
+export const editTitle = document.querySelector("#title");
+export const editPrice = document.querySelector("#price");
+export const editDescription = document.querySelector("#description");
+export const formId = document.querySelector("#id");
