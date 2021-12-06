@@ -32,8 +32,6 @@ const id = params.get("id");
   }
 })();
 
-form.addEventListener("submit", submitEditForm);
-
 const submitEditForm = (event) => {
   event.preventDefault();
   formMessage.innerHTML = "";
@@ -58,6 +56,8 @@ const submitEditForm = (event) => {
   updateProduct(titleValue, priceValue, descriptionValue, idValue);
 };
 
+editForm.addEventListener("submit", submitEditForm);
+
 async function updateProduct(title, price, description, id) {
   const data = JSON.stringify({
     Title: title,
@@ -73,4 +73,12 @@ async function updateProduct(title, price, description, id) {
       Authorization: `Bearer ${token}`,
     },
   };
+
+  try {
+    const response = await fetch(productsUrl + id, options);
+    const json = await response.json();
+    console.log(json);
+  } catch (error) {
+    console.log(error);
+  }
 }
