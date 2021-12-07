@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Add a new product to your product list!">
+    <title>B.O.A.T | Add product</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <div class="logo">B.O.A.T</div>
+        <p class="greating">Welcome admin</p>
+        <nav class="nav">
+            <label class="nav__hamburgerLabel" for="nav__hamburgerMenu"><i class="fas fa-bars"></i></label>
+            <input type="checkbox" id="nav__hamburgerMenu">
+            <ul class="nav__list">
+                <li class="nav__list--item"><a href="admin.html">Products</a></li>
+                <li class="nav__list--item"><a href="add.html">Add products</a></li>
+                <li class="nav__list--item"><a href="index.html">Log out</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="admin">
+        <h1>Edit Product</h1>
+        <div class="loading"></div>
+        <form class="add-product">
+            <div class="message"></div>
+            <div class="addform">
+                <div>
+                    <label for="id">ID:</label>
+                    <input name="id" id="id">
+                    <label for="title">Title</label>
+                    <input type="text" name="title" id="title">
+                    <label for="price">Price</label>
+                    <input type="text" name="price" id="price">
+                </div>
+                <div>
+                    <label for="description">Description</label>
+                    <textarea name="description" id="description" cols="60" rows="10"></textarea>
+                </div>
+            </div>
+            <div class="add">
+                <button id="add__btn">Add product</button>
+            </div>
+        </form>
+    </main>
+    <footer>
+        <div class="footer__text">
+            <p class="footer__text--p">Address 12</p>
+            <p class="footer__text--p">POST 3456</p>
+            <p class="footer__text--p">City</p>
+        </div>
+        <div class="footer__logo">B.O.A.T</div>
+        <div class="footer__icons">
+            <i class="footer__icons--i fab fa-facebook"></i>
+            <i class="footer__icons--i fab fa-twitter"></i>
+            <i class="footer__icons--i fab fa-instagram"></i>
+        </div>
+    </footer>
+    <script type="module" src="js/edit.js"></script>
+</body>
+</html>

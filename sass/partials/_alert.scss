@@ -21,3 +21,21 @@
     color: black;
   }
 }
+.message {
+  .information {
+    border: solid 1px $secondary-color;
+    max-width: 500px;
+    width: 50%;
+    color: $secondary-color;
+    border-radius: $radius;
+    text-align: center;
+  }
+  .danger {
+    @extend .information;
+    border: solid 1px red;
+  }
+  .success {
+    @extend .information;
+    border: solid 1px green;
+  }
+}

@@ -435,6 +435,23 @@ footer .footer__logo {
   color: black;
 }
 
+.message .information, .message .danger, .message .success {
+  border: solid 1px #00264b;
+  max-width: 500px;
+  width: 50%;
+  color: #00264b;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.message .danger {
+  border: solid 1px red;
+}
+
+.message .success {
+  border: solid 1px green;
+}
+
 .searchfield {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -713,9 +730,42 @@ footer .footer__logo {
   border-radius: 5px;
 }
 
+.edit-heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.edit-heading #delete__btn {
+  width: 10rem;
+  border: solid 2px #00264b;
+  border-radius: 5px;
+  padding: 0.3rem;
+  font-family: "Montserrat", sans-serif;
+  background-color: #00264b;
+  color: #f5f8ff;
+}
+
+.edit-heading #delete__btn .fas {
+  margin-left: 0.5rem;
+}
+
+.edit-heading #delete__btn:hover {
+  background-color: #f5f8ff;
+  color: #00264b;
+  cursor: pointer;
+}
+
 .edit-product {
   display: none;
-  max-width: 50rem;
+  max-width: 60rem;
+  margin: 0 auto;
 }
 
 .edit-product .editform {
@@ -742,22 +792,32 @@ footer .footer__logo {
   margin-top: 1rem;
 }
 
+.edit-product .editform input {
+  width: 15rem;
+  border: solid 1px #00264b;
+}
+
+.edit-product .editform textarea {
+  border: solid 1px #00264b;
+}
+
 .edit-product .update {
   text-align: end;
   margin-top: 2rem;
 }
 
-.edit-product #update__btn, .edit-product #delete {
-  width: 10rem;
+.edit-product #update__btn {
+  width: 15rem;
   border: solid 2px #00264b;
   border-radius: 5px;
   padding: 0.5rem;
   font-family: "Montserrat", sans-serif;
   background-color: #00264b;
   color: #f5f8ff;
+  font-size: 1rem;
 }
 
-.edit-product #update__btn:hover, .edit-product #delete:hover {
+.edit-product #update__btn:hover {
   background-color: #f5f8ff;
   color: #00264b;
   cursor: pointer;

@@ -78,6 +78,14 @@ async function updateProduct(title, price, description, id) {
     const response = await fetch(productsUrl + id, options);
     const json = await response.json();
     console.log(json);
+
+    if (json.updated_at) {
+      formMessage.innerHTML += showAlert("Yay! Product is updated", "success");
+    }
+
+    if (json.error) {
+      formMessage.innerHTML += showAlert(json.message, "danger");
+    }
   } catch (error) {
     console.log(error);
   }
