@@ -93,6 +93,7 @@ export const renderFeaturedCard = (arr) => {
 export const renderProductCard = (arr) => {
   productcont.innerHTML = "";
   arr.forEach((element) => {
+    console.log(element);
     productcont.innerHTML += `
     <div class="card productCard">
         <div class="imgCont">

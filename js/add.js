@@ -8,7 +8,6 @@ import {
   tokenKey,
   productsUrl,
   image,
-  uploadedImg,
 } from "./constants.js";
 import { getToken } from "./utils/storage.js";
 
@@ -20,16 +19,16 @@ const addProduct = (event) => {
   const titleValue = title.value.trim();
   const priceValue = parseFloat(price.value);
   const descriptionValue = description.value.trim();
-  const imageUrl = URL.createObjectURL(event.target.files);
+  const imageValue = image.value.trim();
 
-  uploadedImg.src = imageUrl;
+  const imageUrl = `<img src="${imageValue}" alt="uploaded image">`;
 
   if (
     titleValue.length === 0 ||
     priceValue.length === 0 ||
     isNaN(priceValue) ||
     descriptionValue.length === 0 ||
-    imageUrl.length === 0
+    imageValue.length === 0
   ) {
     return (formMessage.innerHTML += showAlert(
       "Please enter proper values",

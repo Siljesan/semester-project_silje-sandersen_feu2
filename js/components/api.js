@@ -14,6 +14,7 @@ export async function getProducts(url, call) {
     call(json);
     searchItems(json);
   } catch (error) {
+    console.log(error);
     document.querySelector(".alert").innerHTML = showAlert(
       "An error occured",
       "danger"
