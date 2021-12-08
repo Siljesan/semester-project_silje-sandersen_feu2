@@ -8,6 +8,7 @@ header {
   @media (max-width: 991px) {
     width: auto;
     padding: 1rem;
+    display: block;
   }
   .logo {
     font-family: $logo-font;
@@ -16,7 +17,7 @@ header {
   .nav__hamburgerLabel {
     display: none;
     @media (max-width: 991px) {
-      display: flex;
+      display: block;
       font-size: 1.5rem;
       margin-left: 2rem;
     }
@@ -26,13 +27,12 @@ header {
   }
   #nav__hamburgerMenu:checked ~ .nav__list {
     @media (max-width: 991px) {
-      display: block;
+      display: flex;
     }
   }
   .nav__list {
     display: flex;
     @media (max-width: 991px) {
-      flex-direction: column;
       display: none;
     }
     .nav__list--item {

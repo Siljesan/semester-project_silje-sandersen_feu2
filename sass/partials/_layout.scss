@@ -10,6 +10,8 @@ body {
   .home {
     position: absolute;
     top: 0;
+    @media (max-width: 991px) {
+    }
   }
 }
 .flex {

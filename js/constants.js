@@ -20,7 +20,6 @@ export const editForm = document.querySelector(".edit-product");
 export const title = document.querySelector("#title");
 export const price = document.querySelector("#price");
 export const description = document.querySelector("#description");
-export const uploadedImg = document.querySelector(".uploaded");
 export const image = document.querySelector("#img");
 export const formId = document.querySelector("#id");
 export const addForm = document.querySelector(".add-product");
