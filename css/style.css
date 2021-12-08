@@ -492,13 +492,31 @@ footer .footer__logo {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 10rem;
   margin-top: 2rem;
+}
+
+@media (max-width: 991px) {
+  .detailcont {
+    width: 90%;
+    margin: 0 auto;
+    display: block;
+  }
 }
 
 .detailcont__img {
   width: 45%;
   border-radius: 5px;
+  margin: 1rem;
+}
+
+@media (max-width: 991px) {
+  .detailcont__img {
+    width: 70%;
+  }
 }
 
 .detailcont .detailtext {
@@ -507,12 +525,31 @@ footer .footer__logo {
   border-left: solid 1px #00264b;
 }
 
+@media (max-width: 991px) {
+  .detailcont .detailtext {
+    width: 90%;
+  }
+}
+
 .detailcont .detailtext__heading {
   font-size: 2.5rem;
 }
 
+@media (max-width: 991px) {
+  .detailcont .detailtext__heading {
+    font-size: 1rem;
+  }
+}
+
 .detailcont .detailtext__paragraph {
   line-height: 1.5rem;
+}
+
+@media (max-width: 991px) {
+  .detailcont .detailtext__paragraph {
+    line-height: 1.2rem;
+    font-size: 0.8rem;
+  }
 }
 
 .detailcont .detailtext__price {
