@@ -4,6 +4,7 @@
   justify-content: space-between;
   @media (max-width: 991) {
     flex-direction: column;
+    justify-content: center;
   }
   #delete__btn {
     width: 10rem;
