@@ -2,6 +2,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  @media (max-width: 991) {
+    flex-direction: column;
+  }
   #delete__btn {
     width: 10rem;
     border: solid 2px $secondary-color;
@@ -27,6 +30,9 @@
   .editform {
     display: flex;
     justify-content: space-between;
+    @media (max-width: 991px) {
+      display: block;
+    }
     div {
       display: flex;
       flex-direction: column;
@@ -41,6 +47,9 @@
     }
     textarea {
       border: solid 1px $secondary-color;
+      @media (max-width: 991) {
+        max-width: 400px;
+      }
     }
   }
   .update {
