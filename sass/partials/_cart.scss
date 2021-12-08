@@ -4,6 +4,9 @@
   width: 60%;
   margin: 0 auto;
   margin-bottom: $margin;
+  @media (max-width: 991px) {
+    width: 90%;
+  }
   .cartsummary {
     width: 100%;
     text-align: end;
@@ -43,9 +46,15 @@
   &__item--img {
     width: 250px;
     border-radius: $radius;
+    @media (max-width: 991px) {
+      width: 100px;
+    }
   }
   &__itemText {
     text-align: end;
+    @media (max-width: 991px) {
+      font-size: 1rem;
+    }
   }
   &__itemText--price {
     font-weight: bold;

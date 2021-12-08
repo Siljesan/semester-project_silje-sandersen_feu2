@@ -545,6 +545,12 @@ footer .footer__logo {
   margin-bottom: 10rem;
 }
 
+@media (max-width: 991px) {
+  .yourcart {
+    width: 90%;
+  }
+}
+
 .yourcart .cartsummary {
   width: 100%;
   text-align: end;
@@ -596,8 +602,20 @@ footer .footer__logo {
   border-radius: 5px;
 }
 
+@media (max-width: 991px) {
+  .cart__item--img {
+    width: 100px;
+  }
+}
+
 .cart__itemText {
   text-align: end;
+}
+
+@media (max-width: 991px) {
+  .cart__itemText {
+    font-size: 1rem;
+  }
 }
 
 .cart__itemText--price {
