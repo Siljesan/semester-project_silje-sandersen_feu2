@@ -1,51 +1,35 @@
 import { showAlert } from "./components/alert.js";
 import {
-  editForm,
+  formMessage,
   title,
-  productsUrl,
   price,
   description,
-  formMessage,
-  formId,
+  addForm,
   tokenKey,
+  productsUrl,
+  image,
+  uploadedImg,
 } from "./constants.js";
 import { getToken } from "./utils/storage.js";
 
-const queryString = document.location.search;
-const params = new URLSearchParams(queryString);
-const id = params.get("id");
-
-(async function () {
-  try {
-    const response = await fetch(productsUrl + id);
-    const json = await response.json();
-    document.querySelector(".loading").classList.add("hide");
-
-    title.value = json.Title;
-    price.value = json.Price;
-    description.value = json.Description;
-    formId.value = json.id;
-  } catch (error) {
-    console.log(error);
-  } finally {
-    editForm.style.display = "block";
-  }
-})();
-
-const submitEditForm = (event) => {
+const addProduct = (event) => {
   event.preventDefault();
+
   formMessage.innerHTML = "";
 
   const titleValue = title.value.trim();
   const priceValue = parseFloat(price.value);
   const descriptionValue = description.value.trim();
-  const idValue = formId.value;
+  const imageUrl = URL.createObjectURL(event.target.files);
+
+  uploadedImg.src = imageUrl;
 
   if (
     titleValue.length === 0 ||
     priceValue.length === 0 ||
     isNaN(priceValue) ||
-    descriptionValue.length === 0
+    descriptionValue.length === 0 ||
+    imageUrl.length === 0
   ) {
     return (formMessage.innerHTML += showAlert(
       "Please enter proper values",
@@ -53,34 +37,38 @@ const submitEditForm = (event) => {
     ));
   }
 
-  updateProduct(titleValue, priceValue, descriptionValue, idValue);
+  addProductListener(titleValue, priceValue, descriptionValue, imageUrl);
 };
 
-editForm.addEventListener("submit", submitEditForm);
+addForm.addEventListener("submit", addProduct);
 
-async function updateProduct(title, price, description, id) {
+async function addProductListener(title, price, description, img) {
   const data = JSON.stringify({
     Title: title,
     Price: price,
     Description: description,
+    Productimg: img,
   });
   const token = getToken(tokenKey);
   const options = {
-    method: "PUT",
+    method: "POST",
     body: data,
     headers: {
       "Content-Type": "application/json",
       Authorization: `Bearer ${token}`,
     },
   };
-
   try {
-    const response = await fetch(productsUrl + id, options);
+    const response = await fetch(productsUrl, options);
     const json = await response.json();
     console.log(json);
 
-    if (json.updated_at) {
-      formMessage.innerHTML += showAlert("Yay! Product is updated", "success");
+    if (json.created_at) {
+      formMessage.innerHTML += showAlert(
+        "Congratulations! Product is added to list",
+        "success"
+      );
+      addForm.reset();
     }
 
     if (json.error) {

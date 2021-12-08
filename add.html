@@ -30,12 +30,13 @@
             <div class="message"></div>
             <div class="addform">
                 <div>
-                    <label for="id">ID:</label>
-                    <input name="id" id="id">
                     <label for="title">Title</label>
                     <input type="text" name="title" id="title">
                     <label for="price">Price</label>
                     <input type="text" name="price" id="price">
+                    <label for="img">Upload image</label>
+                    <input type="file" name="img" id="img" accept="image/*">
+                    <img id="uploaded" alt="uploaded image">
                 </div>
                 <div>
                     <label for="description">Description</label>
@@ -60,6 +61,6 @@
             <i class="footer__icons--i fab fa-instagram"></i>
         </div>
     </footer>
-    <script type="module" src="js/edit.js"></script>
+    <script type="module" src="js/add.js"></script>
 </body>
 </html>

@@ -5,6 +5,7 @@ const renderProductList = (arr) => {
   let featured = "";
   productList.innerHTML = "";
   arr.forEach((element) => {
+    console.log(element);
     if (element.Featured) {
       featured = "YES";
     } else {
