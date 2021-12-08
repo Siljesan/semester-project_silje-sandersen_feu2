@@ -27,6 +27,9 @@
     padding: 1rem;
     border-radius: $radius;
     justify-content: center;
+    @media (max-width: 600px) {
+      width: 80%;
+    }
     .danger {
       color: red;
     }

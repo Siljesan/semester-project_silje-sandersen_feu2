@@ -683,6 +683,12 @@ footer .footer__logo {
           justify-content: center;
 }
 
+@media (max-width: 600px) {
+  .loginmain .loginform {
+    width: 80%;
+  }
+}
+
 .loginmain .loginform .danger {
   color: red;
 }
