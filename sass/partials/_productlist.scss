@@ -1,11 +1,19 @@
 .admin {
   margin: 2rem $margin;
+  @media (max-width: 991px) {
+    margin: 2rem 1rem;
+  }
 }
 .adminProducts {
   border-bottom: solid 1px $secondary-color;
   &__headings {
     display: flex;
     justify-content: space-around;
+    &--img {
+      @media (max-width: 991px) {
+        display: none;
+      }
+    }
   }
   &__items {
     display: flex;
@@ -13,6 +21,10 @@
     align-items: center;
     border-top: solid 1px $secondary-color;
     padding: 1rem;
+    @media (max-width: 991px) {
+      font-size: 0.8rem;
+      padding: 0.3rem;
+    }
     &--element {
       max-width: 150px;
     }
@@ -20,5 +32,8 @@
   &__img {
     width: 150px;
     border-radius: $radius;
+    @media (max-width: 991px) {
+      display: none;
+    }
   }
 }
