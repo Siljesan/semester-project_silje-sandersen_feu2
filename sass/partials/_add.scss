@@ -1,6 +1,10 @@
 .add-product {
   max-width: 60rem;
   margin: 0 auto;
+  @media (max-width: 991) {
+    margin: 1rem;
+    width: 60%;
+  }
   .addform {
     display: flex;
     justify-content: space-between;

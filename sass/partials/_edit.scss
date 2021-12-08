@@ -27,6 +27,10 @@
   display: none;
   max-width: 60rem;
   margin: 0 auto;
+  @media (max-width: 991) {
+    margin: 1rem;
+    width: 60%;
+  }
   .editform {
     display: flex;
     justify-content: space-between;
@@ -47,9 +51,6 @@
     }
     textarea {
       border: solid 1px $secondary-color;
-      @media (max-width: 991) {
-        max-width: 400px;
-      }
     }
   }
   .update {

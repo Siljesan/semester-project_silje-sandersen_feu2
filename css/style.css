@@ -825,6 +825,13 @@ footer .footer__logo {
   margin: 0 auto;
 }
 
+@media (max-width: 991) {
+  .edit-product {
+    margin: 1rem;
+    width: 60%;
+  }
+}
+
 .edit-product .editform {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -864,12 +871,6 @@ footer .footer__logo {
   border: solid 1px #00264b;
 }
 
-@media (max-width: 991) {
-  .edit-product .editform textarea {
-    max-width: 400px;
-  }
-}
-
 .edit-product .update {
   text-align: end;
   margin-top: 2rem;
@@ -895,6 +896,13 @@ footer .footer__logo {
 .add-product {
   max-width: 60rem;
   margin: 0 auto;
+}
+
+@media (max-width: 991) {
+  .add-product {
+    margin: 1rem;
+    width: 60%;
+  }
 }
 
 .add-product .addform {
