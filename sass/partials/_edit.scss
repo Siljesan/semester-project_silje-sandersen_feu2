@@ -2,9 +2,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  @media (max-width: 991) {
-    flex-direction: column;
-    justify-content: center;
+  @media (max-width: 991px) {
+    display: block;
+    margin-bottom: 1rem;
   }
   #delete__btn {
     width: 10rem;
@@ -28,9 +28,9 @@
   display: none;
   max-width: 60rem;
   margin: 0 auto;
-  @media (max-width: 991) {
+  @media (max-width: 991px) {
     margin: 1rem;
-    width: 60%;
+    width: 80%;
   }
   .editform {
     display: flex;
@@ -57,6 +57,9 @@
   .update {
     text-align: end;
     margin-top: 2rem;
+    @media (max-width: 991px) {
+      text-align: start;
+    }
   }
   #update__btn {
     width: 15rem;

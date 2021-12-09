@@ -8,6 +8,8 @@ import {
   formMessage,
   formId,
   tokenKey,
+  imgurl,
+  strapiUrl,
 } from "./constants.js";
 import { getToken } from "./utils/storage.js";
 
@@ -24,6 +26,7 @@ const id = params.get("id");
     title.value = json.Title;
     price.value = json.Price;
     description.value = json.Description;
+    imgurl.value = strapiUrl + json.Productimg.url;
     formId.value = json.id;
   } catch (error) {
     console.log(error);
