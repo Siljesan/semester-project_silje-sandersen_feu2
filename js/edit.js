@@ -11,6 +11,8 @@ import {
   imgurl,
   strapiUrl,
   featured,
+  deleteBtn,
+  deleteMessage,
 } from "./constants.js";
 import { getToken } from "./utils/storage.js";
 
@@ -110,6 +112,32 @@ async function updateProduct(title, price, description, id, img, featured) {
     if (json.error) {
       formMessage.innerHTML += showAlert(json.message, "danger");
     }
+  } catch (error) {
+    console.log(error);
+    formMessage.innerHTML += showAlert("An error occured", "danger");
+  }
+}
+
+deleteBtn.onclick = function deleteProduct() {
+  deleteListener(id);
+};
+
+async function deleteListener(id) {
+  const token = getToken(tokenKey);
+  const options = {
+    method: "DELETE",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${token}`,
+    },
+  };
+  try {
+    const response = await fetch(productsUrl + id, options);
+    const json = await response.json();
+
+    editForm.style.display = "none";
+
+    deleteMessage.innerHTML += showAlert("Product is deleted", "success");
   } catch (error) {
     console.log(error);
     formMessage.innerHTML += showAlert("An error occured", "danger");

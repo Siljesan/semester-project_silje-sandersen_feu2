@@ -26,3 +26,5 @@ export const featured = document.querySelector("#featured");
 export const image = document.querySelector("#img");
 export const formId = document.querySelector("#id");
 export const addForm = document.querySelector(".add-product");
+export const deleteBtn = document.querySelector("#delete__btn");
+export const deleteMessage = document.querySelector(".deleteMessage");
