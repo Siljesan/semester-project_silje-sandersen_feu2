@@ -10,6 +10,7 @@ import {
   tokenKey,
   imgurl,
   strapiUrl,
+  featured,
 } from "./constants.js";
 import { getToken } from "./utils/storage.js";
 
@@ -23,11 +24,17 @@ const id = params.get("id");
     const json = await response.json();
     document.querySelector(".loading").classList.add("hide");
 
+    if (json.Featured) {
+      featured.checked = true;
+    }
+
     title.value = json.Title;
     price.value = json.Price;
     description.value = json.Description;
     imgurl.value = strapiUrl + json.Productimg.url;
     formId.value = json.id;
+
+    console.log(json);
   } catch (error) {
     console.log(error);
   } finally {
@@ -42,13 +49,16 @@ const submitEditForm = (event) => {
   const titleValue = title.value.trim();
   const priceValue = parseFloat(price.value);
   const descriptionValue = description.value.trim();
+  const imageValue = imgurl.value.trim();
+  const featuredCheck = featured.checked;
   const idValue = formId.value;
 
   if (
     titleValue.length === 0 ||
     priceValue.length === 0 ||
     isNaN(priceValue) ||
-    descriptionValue.length === 0
+    descriptionValue.length === 0 ||
+    imageValue.length === 0
   ) {
     return (formMessage.innerHTML += showAlert(
       "Please enter proper values",
@@ -56,16 +66,27 @@ const submitEditForm = (event) => {
     ));
   }
 
-  updateProduct(titleValue, priceValue, descriptionValue, idValue);
+  updateProduct(
+    titleValue,
+    priceValue,
+    descriptionValue,
+    idValue,
+    imageValue,
+    featuredCheck
+  );
 };
 
 editForm.addEventListener("submit", submitEditForm);
 
-async function updateProduct(title, price, description, id) {
+async function updateProduct(title, price, description, id, img, featured) {
   const data = JSON.stringify({
     Title: title,
     Price: price,
     Description: description,
+    Featured: featured,
+    Productimg: {
+      url: img,
+    },
   });
   const token = getToken(tokenKey);
   const options = {

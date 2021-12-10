@@ -50,6 +50,9 @@
       width: 15rem;
       border: solid 1px $secondary-color;
     }
+    #featured {
+      width: fit-content;
+    }
     textarea {
       border: solid 1px $secondary-color;
     }

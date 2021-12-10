@@ -7,7 +7,8 @@ import {
   addForm,
   tokenKey,
   productsUrl,
-  image,
+  imgurl,
+  featured,
 } from "./constants.js";
 import { getToken } from "./utils/storage.js";
 
@@ -19,9 +20,8 @@ const addProduct = (event) => {
   const titleValue = title.value.trim();
   const priceValue = parseFloat(price.value);
   const descriptionValue = description.value.trim();
-  const imageValue = image.value.trim();
-
-  const imageUrl = `<img src="${imageValue}" alt="uploaded image">`;
+  const imageValue = imgurl.value.trim();
+  const featuredCheck = featured.checked;
 
   if (
     titleValue.length === 0 ||
@@ -36,17 +36,27 @@ const addProduct = (event) => {
     ));
   }
 
-  addProductListener(titleValue, priceValue, descriptionValue, imageUrl);
+  addProductListener(
+    titleValue,
+    priceValue,
+    descriptionValue,
+    imageValue,
+    featuredCheck
+  );
 };
 
 addForm.addEventListener("submit", addProduct);
 
-async function addProductListener(title, price, description, img) {
+async function addProductListener(title, price, description, img, featured) {
   const data = JSON.stringify({
     Title: title,
     Price: price,
     Description: description,
-    Productimg: img,
+    Featured: featured,
+    Productimg: {
+      alternativeText: "uploaded image",
+      url: img,
+    },
   });
   const token = getToken(tokenKey);
   const options = {
