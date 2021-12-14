@@ -92,6 +92,13 @@ header .nav__list .nav__list--item {
   font-size: 20px;
 }
 
+header .nav__list button {
+  border: none;
+  background: none;
+  font-family: "Montserrat", sans-serif;
+  cursor: pointer;
+}
+
 header .nav__list .active {
   font-weight: bolder;
 }

@@ -40,6 +40,12 @@ header {
       list-style-type: none;
       font-size: 20px;
     }
+    button {
+      border: none;
+      background: none;
+      font-family: $main-font;
+      cursor: pointer;
+    }
     .active {
       font-weight: bolder;
     }
