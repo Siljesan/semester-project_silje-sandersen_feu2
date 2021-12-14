@@ -1,6 +1,13 @@
 import { getProducts } from "./components/api.js";
 import { renderNav } from "./components/nav.js";
-import { productList, strapiUrl, productsUrl } from "./constants.js";
+import { productList, strapiUrl, productsUrl, tokenKey } from "./constants.js";
+import { getToken } from "./utils/storage.js";
+
+const token = getToken(tokenKey);
+
+if (!token) {
+  location.href = "index.html";
+}
 
 const renderProductList = (arr) => {
   let featured = "";

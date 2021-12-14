@@ -19,6 +19,12 @@ import { getToken } from "./utils/storage.js";
 
 renderNav();
 
+const token = getToken(tokenKey);
+
+if (!token) {
+  location.href = "index.html";
+}
+
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const id = params.get("id");
@@ -93,7 +99,6 @@ async function updateProduct(title, price, description, id, img, featured) {
       url: img,
     },
   });
-  const token = getToken(tokenKey);
   const options = {
     method: "PUT",
     body: data,
@@ -129,7 +134,6 @@ async function deleteListener(id) {
   const confirmDelete = confirm("Do you wish to delete this product?");
 
   if (confirmDelete) {
-    const token = getToken(tokenKey);
     const options = {
       method: "DELETE",
       headers: {

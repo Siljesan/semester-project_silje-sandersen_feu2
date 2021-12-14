@@ -739,6 +739,7 @@ footer .footer__logo {
 
 .loginmain .loginform .danger {
   color: red;
+  width: 90%;
 }
 
 .loginmain .loginform label {

@@ -15,6 +15,12 @@ import { getToken } from "./utils/storage.js";
 
 renderNav();
 
+const token = getToken(tokenKey);
+
+if (!token) {
+  location.href = "index.html";
+}
+
 const addProduct = (event) => {
   event.preventDefault();
 
@@ -61,7 +67,6 @@ async function addProductListener(title, price, description, img, featured) {
       url: img,
     },
   });
-  const token = getToken(tokenKey);
   const options = {
     method: "POST",
     body: data,
