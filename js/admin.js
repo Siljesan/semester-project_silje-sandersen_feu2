@@ -1,4 +1,5 @@
 import { getProducts } from "./components/api.js";
+import { renderNav } from "./components/nav.js";
 import { productList, strapiUrl, productsUrl } from "./constants.js";
 
 const renderProductList = (arr) => {
@@ -23,3 +24,4 @@ const renderProductList = (arr) => {
 };
 
 getProducts(productsUrl, renderProductList);
+renderNav();

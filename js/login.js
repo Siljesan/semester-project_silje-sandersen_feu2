@@ -6,8 +6,9 @@ import {
   loginForm,
   strapiUrl,
   tokenKey,
+  userKey,
 } from "./constants.js";
-import { saveToken } from "./utils/storage.js";
+import { saveToken, saveUser } from "./utils/storage.js";
 
 const submitForm = (event) => {
   console.log(event);
@@ -46,6 +47,7 @@ async function performLogin(email, password) {
 
     if (json.user) {
       saveToken(tokenKey, json.jwt);
+      saveUser(userKey, json.user);
 
       location.href = "admin.html";
     }

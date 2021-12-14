@@ -12,8 +12,6 @@ import { summarizeCart } from "./sum.js";
 let collection;
 let storageArray = retrieveFromStorage(cartKey);
 
-console.log(collection);
-
 const createCart = (item, version) => {
   const { id, Productimg, Title, Price } = item;
 

@@ -1,4 +1,5 @@
 import { showAlert } from "./components/alert.js";
+import { renderNav } from "./components/nav.js";
 import {
   editForm,
   title,
@@ -15,6 +16,8 @@ import {
   deleteMessage,
 } from "./constants.js";
 import { getToken } from "./utils/storage.js";
+
+renderNav();
 
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);

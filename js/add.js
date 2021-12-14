@@ -1,4 +1,5 @@
 import { showAlert } from "./components/alert.js";
+import { renderNav } from "./components/nav.js";
 import {
   formMessage,
   title,
@@ -11,6 +12,8 @@ import {
   featured,
 } from "./constants.js";
 import { getToken } from "./utils/storage.js";
+
+renderNav();
 
 const addProduct = (event) => {
   event.preventDefault();

@@ -11,11 +11,13 @@ export const cartKey = "cart";
 export const cartContainer = document.querySelector(".cartcont");
 export const cartSum = document.querySelector(".cartsum");
 export const tokenKey = "token";
+export const userKey = "user";
 export const formMessage = document.querySelector(".message");
 export const loginForm = document.querySelector(".loginform");
 export const formEmail = document.querySelector("#email");
 export const formPassword = document.querySelector("#password");
 export const productList = document.querySelector(".productlist");
+export const navCont = document.querySelector(".nav-container");
 
 export const editForm = document.querySelector(".edit-product");
 export const title = document.querySelector("#title");
