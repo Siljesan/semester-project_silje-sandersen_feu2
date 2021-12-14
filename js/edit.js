@@ -126,23 +126,27 @@ deleteBtn.onclick = function deleteProduct() {
 };
 
 async function deleteListener(id) {
-  const token = getToken(tokenKey);
-  const options = {
-    method: "DELETE",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${token}`,
-    },
-  };
-  try {
-    const response = await fetch(productsUrl + id, options);
-    const json = await response.json();
+  const confirmDelete = confirm("Do you wish to delete this product?");
 
-    editForm.style.display = "none";
+  if (confirmDelete) {
+    const token = getToken(tokenKey);
+    const options = {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
+      },
+    };
+    try {
+      const response = await fetch(productsUrl + id, options);
+      const json = await response.json();
 
-    deleteMessage.innerHTML += showAlert("Product is deleted", "success");
-  } catch (error) {
-    console.log(error);
-    formMessage.innerHTML += showAlert("An error occured", "danger");
+      editForm.style.display = "none";
+
+      deleteMessage.innerHTML += showAlert("Product is deleted", "success");
+    } catch (error) {
+      console.log(error);
+      formMessage.innerHTML += showAlert("An error occured", "danger");
+    }
   }
 }

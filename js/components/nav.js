@@ -1,4 +1,4 @@
-import { navCont, tokenKey, userKey } from "../constants.js";
+import { logout, navCont, tokenKey, userKey } from "../constants.js";
 import { getUsername, removeFromStorage } from "../utils/storage.js";
 
 export const renderNav = () => {
@@ -29,7 +29,7 @@ export const renderNav = () => {
 
   let authLink = `<li class="nav__list--item"><a href="login.html">Login</a></li>`;
   if (username) {
-    authLink = `<li class="nav__list--item" onclick="${signoutUser}"><a href="index.html">Log out</a></li>`;
+    authLink = `<li class="nav__list--item logout"><a href="index.html">Logout</a></li>`;
   }
 
   navCont.innerHTML = `
@@ -41,10 +41,14 @@ export const renderNav = () => {
   ${authLink}
   </ul>
   </nav>`;
+
+  //signoutUser();
 };
 
-const signoutUser = (event) => {
-  event.preventDefault();
-  removeFromStorage(tokenKey);
-  removeFromStorage(userKey);
+const signoutUser = () => {
+  return logout.addEventListener("click", function (event) {
+    event.preventDefault();
+    removeFromStorage(tokenKey);
+    removeFromStorage(userKey);
+  });
 };
