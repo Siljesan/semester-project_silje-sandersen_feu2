@@ -63,7 +63,6 @@ async function addProductListener(title, price, description, img, featured) {
     Description: description,
     Featured: featured,
     Productimg: {
-      alternativeText: "uploaded image",
       url: img,
     },
   });

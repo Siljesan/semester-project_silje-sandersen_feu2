@@ -6,6 +6,7 @@ import {
   strapiUrl,
 } from "../constants.js";
 import { retrieveFromStorage, saveToStorage } from "../utils/storage.js";
+import { showAlert } from "./alert.js";
 import { findIndex } from "./findIndex.js";
 import { summarizeCart } from "./sum.js";
 
@@ -50,6 +51,11 @@ export const addListener = (item) => {
   document.getElementById(`${item.id}-add`).addEventListener("click", () => {
     collection.push(item);
     saveToStorage(cartKey, collection);
+    const addMessage = document.querySelector(".detailMessage");
+    addMessage.innerHTML += showAlert(
+      "Product is added to the cart",
+      "success"
+    );
   });
 };
 
@@ -61,8 +67,8 @@ export const renderCart = () => {
     storageArray.forEach((item) => {
       return (cartContainer.innerHTML += createCart(item, "remove"));
     });
-    removeListener();
     summarizeCart(storageArray);
+    removeListener();
   }
 };
 

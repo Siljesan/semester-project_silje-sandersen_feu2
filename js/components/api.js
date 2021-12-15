@@ -38,6 +38,7 @@ export async function getDetails(url, itemId) {
         <div class="detailtext">
         <h1 class="detailtext__heading">${json.Title}</h1>
         <p class="detailtext__paragraph">${json.Description}</p>
+        <div class="detailMessage"></div>
         <p class="detailtext__price">${json.Price} NOK</p>
         <button class="detailtext__btn" id="${json.id}-add">Add to cart</button>
         </div>
