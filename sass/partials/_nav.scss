@@ -4,15 +4,20 @@ header {
   align-items: center;
   padding: 1rem 5rem 1rem 5rem;
   background: none;
-  width: 85%;
   @media (max-width: 991px) {
-    width: auto;
     padding: 1rem;
-    display: block;
+    align-items: flex-start;
   }
   .logo {
     font-family: $logo-font;
     font-size: 60px;
+  }
+  .nav {
+    @media (max-width: 991px) {
+      display: flex;
+      flex-direction: column;
+      align-items: end;
+    }
   }
   .nav__hamburgerLabel {
     display: none;
@@ -28,6 +33,9 @@ header {
   #nav__hamburgerMenu:checked ~ .nav__list {
     @media (max-width: 991px) {
       display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-end;
     }
   }
   .nav__list {
