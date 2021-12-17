@@ -14,12 +14,12 @@ let collection;
 let storageArray = retrieveFromStorage(cartKey);
 
 const createCart = (item, version) => {
-  const { id, Productimg, Title, Price } = item;
+  const { id, imgUrl, Title, Price } = item;
 
   return `
   <div class="cart">
   <div class="cart__item">
-  <img class="cart__item--img" src="${strapiUrl}${Productimg.url}" alt="${Productimg.alternativeText}">
+  <img class="cart__item--img" src="${imgUrl}" alt="Product image">
   <div class="cart__itemText">
   <h3 class="cart__itemText--title">${Title}</h3>
   <p class="cart__itemText--price">${Price} NOK</p>
@@ -81,7 +81,7 @@ export const renderFeaturedCard = (arr) => {
             <div class="imgCont">
             <a href="productDetail.html?id=${element.id}">
                 <div class="imgCont__overlay"></div>
-                <img class="card__img" src="${strapiUrl}${element.Productimg.url}" alt="${element.Productimg.alternativeText}">
+                <img class="card__img" src="${element.imgUrl}" alt="Product image">
                 <div class="imgCont__details fadeIn-top">
                     <h4>Read more</h4>
                 </div>
@@ -103,7 +103,7 @@ export const renderProductCard = (arr) => {
         <div class="imgCont">
             <a href="productDetail.html?id=${element.id}">
                 <div class="imgCont__overlay"></div>
-                <img class="card__img" src="${strapiUrl}${element.Productimg.url}" alt="${element.Productimg.alternativeText}">
+                <img class="card__img" src="${element.imgUrl}" alt="Product image">
                 <div class="imgCont__details fadeIn-top">
                     <h4>Read more</h4>
                 </div>

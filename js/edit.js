@@ -42,7 +42,7 @@ const id = params.get("id");
     title.value = json.Title;
     price.value = json.Price;
     description.value = json.Description;
-    imgurl.value = strapiUrl + json.Productimg.url;
+    imgurl.value = json.imgUrl;
     formId.value = json.id;
 
     console.log(json);
@@ -95,9 +95,7 @@ async function updateProduct(title, price, description, id, img, featured) {
     Price: price,
     Description: description,
     Featured: featured,
-    Productimg: {
-      url: img,
-    },
+    imgUrl: img,
   });
   const options = {
     method: "PUT",

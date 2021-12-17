@@ -29,7 +29,7 @@ const addProduct = (event) => {
   const titleValue = title.value.trim();
   const priceValue = parseFloat(price.value);
   const descriptionValue = description.value.trim();
-  const imageValue = imgurl.value.trim();
+  const imgValue = imgurl.value.trim();
   const featuredCheck = featured.checked;
 
   if (
@@ -37,7 +37,7 @@ const addProduct = (event) => {
     priceValue.length === 0 ||
     isNaN(priceValue) ||
     descriptionValue.length === 0 ||
-    imageValue.length === 0
+    imgValue.length === 0
   ) {
     return (formMessage.innerHTML += showAlert(
       "Please enter proper values",
@@ -49,7 +49,7 @@ const addProduct = (event) => {
     titleValue,
     priceValue,
     descriptionValue,
-    imageValue,
+    imgValue,
     featuredCheck
   );
 };
@@ -62,9 +62,7 @@ async function addProductListener(title, price, description, img, featured) {
     Price: price,
     Description: description,
     Featured: featured,
-    Productimg: {
-      url: img,
-    },
+    imgUrl: img,
   });
   const options = {
     method: "POST",

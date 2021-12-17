@@ -34,7 +34,7 @@ export async function getDetails(url, itemId) {
     document.title = json.Title;
     details.innerHTML += `
         <div class="detailcont">
-        <img class="detailcont__img" src="${strapiUrl}${json.Productimg.url}" alt="${json.Productimg.alternativeText}">
+        <img class="detailcont__img" src="${json.imgUrl}" alt="Product image">
         <div class="detailtext">
         <h1 class="detailtext__heading">${json.Title}</h1>
         <p class="detailtext__paragraph">${json.Description}</p>
