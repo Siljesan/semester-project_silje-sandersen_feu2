@@ -901,6 +901,7 @@ footer .footer__logo {
   display: none;
   max-width: 60rem;
   margin: 0 auto;
+  height: 60vh;
 }
 
 @media (max-width: 991px) {
@@ -986,6 +987,7 @@ footer .footer__logo {
 .add-product {
   max-width: 60rem;
   margin: 0 auto;
+  height: 60vh;
 }
 
 @media (max-width: 991) {
