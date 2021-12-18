@@ -14,7 +14,8 @@
     border-radius: $radius;
     margin: 1rem;
     @media (max-width: 991px) {
-      width: 70%;
+      margin: 0;
+      width: 100%;
     }
   }
   .detailtext {

@@ -3,7 +3,19 @@ body {
   margin: 0;
   font-family: "Montserrat", sans-serif;
   background-color: #f5f8ff;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   position: relative;
+}
+
+body footer {
+  margin-top: auto;
 }
 
 body a {
@@ -553,7 +565,8 @@ footer .footer__logo {
 
 @media (max-width: 991px) {
   .detailcont__img {
-    width: 70%;
+    margin: 0;
+    width: 100%;
   }
 }
 
@@ -903,7 +916,6 @@ footer .footer__logo {
   display: none;
   max-width: 60rem;
   margin: 0 auto;
-  height: 60vh;
 }
 
 @media (max-width: 991px) {
@@ -989,7 +1001,6 @@ footer .footer__logo {
 .add-product {
   max-width: 60rem;
   margin: 0 auto;
-  height: 60vh;
 }
 
 @media (max-width: 991) {

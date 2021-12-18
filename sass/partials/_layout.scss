@@ -2,7 +2,13 @@ body {
   margin: 0;
   font-family: $main-font;
   background-color: $primary-color;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   position: relative;
+  footer {
+    margin-top: auto;
+  }
   a {
     text-decoration: none;
     color: black;
