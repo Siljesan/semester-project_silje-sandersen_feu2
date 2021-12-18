@@ -19,10 +19,12 @@ const createCart = (item, version) => {
   return `
   <div class="cart">
   <div class="cart__item">
+  <a href="productDetail.html?id=${id}">
   <img class="cart__item--img" src="${imgUrl}" alt="Product image">
   <div class="cart__itemText">
   <h3 class="cart__itemText--title">${Title}</h3>
   <p class="cart__itemText--price">${Price} NOK</p>
+  </a>
   <button class="cart__item--btn" id="${id}-${version}"><i class="fas fa-trash"></i></button>
   </div>
   </div>
